@@ -1,0 +1,19 @@
+{
+    "name": "BlessDarah/LaravelCampay",
+    "description": "Laravel package for mobile money with Campay",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+        }
+    },
+    "authors": [
+        {
+            "name": "Bless Darah",
+            "email": "blessdarahuba@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}

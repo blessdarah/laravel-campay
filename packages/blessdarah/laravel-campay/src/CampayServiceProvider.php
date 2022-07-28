@@ -13,7 +13,13 @@ class CampayServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->publishes([
+            __DIR__ . '/../config/laravel-campay.php' => config_path('laravel-campay.php')
+        ]);
+
+        $this->app->singleton(LaravelCampay::class, function () {
+            return new LaravelCampay();
+        });
     }
 
     /**
@@ -23,6 +29,6 @@ class CampayServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-      include __DIR__ . '/routes.php';
+        include __DIR__ . '/routes.php';
     }
 }
